@@ -1,5 +1,6 @@
 (ns weather-station-api.model
-   (:require [clojure.java.jdbc :as sql]
+   (:require [weather-station-api.migration :as migration]
+             [clojure.java.jdbc :as sql]
              [clj-time.core :as t]
              [clj-time.jdbc]))
 
@@ -76,3 +77,6 @@
           nil ; column names omitted
           ins-rows))
 
+(defn migrate []
+  (def spec (spec-fn))
+  (migration/migrate spec))

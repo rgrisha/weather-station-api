@@ -15,6 +15,6 @@
              :uberjar  {:aot :all}}
   :test-paths  ["test"]
   :main weather-station-api.web
-  ; :ring {:handler weather-station-api.web/app}
+  :ring {:handler weather-station-api.web/app}
   :uberjar-name "weather-station-api.jar"
   )

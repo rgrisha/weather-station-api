@@ -34,5 +34,6 @@
                        :join? false}))
 
 (defn -main  []
+  (model/migrate)
   (let  [port (Integer. (or (System/getenv "PORT") "8080"))]
     (start port)))
