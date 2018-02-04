@@ -9,6 +9,7 @@
                  [ring/ring-jetty-adapter "1.6.3"]
                  [compojure "1.6.0"]
                  [ring/ring-json "0.4.0"]
+                 [ring-logger "0.7.7"]
                  [clj-time "0.14.2"]]
   :plugins [[lein-ring "0.12.3"]]
   :profiles {:user {:plugins  [[venantius/ultra "0.5.2"]]}

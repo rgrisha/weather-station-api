@@ -17,7 +17,7 @@
     
     {:classname "org.postgresql.Driver"
      :subprotocol "postgresql"
-     :ssl true
+     ; :ssl true
      :sslfactory "org.postgresql.ssl.NonValidatingFactory"
      :user  (get user-and-password 0)
      :password  (get user-and-password 1)
