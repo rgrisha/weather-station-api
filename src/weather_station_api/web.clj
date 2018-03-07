@@ -13,10 +13,16 @@
   (GET "/measurements" request
       {:status 200
        :body (model/get-measurements)})
+
+  (GET "/last-measurements" request
+       {:status 200
+        :body (model/get-last-measurements)})
+
   (POST "/measurement" {body :body}
       (println (str "got json body" body))  
       (model/add-measurement body)  
       {:status 201})
+
   (route/not-found {:status 404 :body "Not Found"}))
 
 (def app
